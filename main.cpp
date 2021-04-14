@@ -7,5 +7,7 @@
 int main(){
 
     Monstre::afficheMonstre();
+    Monstre::getHit();
+    Monstre::Mort();
     return;
 }

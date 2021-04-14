@@ -28,15 +28,23 @@ using namespace std;
 
     /////////////////////////////////
 
-    void Monstre::afficheStat(){
+    void Monstre::afficheMonstre(){
         std::cout << _nom << std::endl;
         std::cout << "PV :", _vie, "ATK :", _attaque, "MANA :", _coutMana <<std::endl;
         return;
     }
 
-    void Monstre::attaqueMonstre(int attaqueEnnemis){
+    void Monstre::getHit(int attaqueEnnemis, int PvEnnemis){
+        PvEnnemis = PvEnnemis - _attaque;
         _health = _health - attaqueEnnemis;
+        _restrinctionAt = true;
         return _health;
+    }
+
+    void Monstre::Mort(){
+       if (_health == 0)
+            _mort = true;
+        return;
     }
 
 #endif

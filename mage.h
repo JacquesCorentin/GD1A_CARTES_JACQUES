@@ -1,26 +1,28 @@
-#ifndef MONSTRE_H
-#define MONSTRE_H
+#ifndef MAGE_H
+#define MAGE_H
 
 #include <iostream>
 #include <string>
 using namespace std;
 
-class Monstre{
+class Mage{
 
 
     private:
-        int _health = 10;
-        int _coutMana = 3;
-        int _def = 4;
+        int _health = 50;
         int _attaque = 5;
-        std::string _nom = "Goblin";
+        std::string _nom = "LeRoiMerlin";
+        std::vector<Monstre> _invocMonstres();
         bool _restrictionAt = false;
         bool _mort = false;
 
     public:
         Monstre();
+        std::string getNom();
+        int getVie();
+        std::vector<Monstre> getInvocMonstre();
         bool restrinctionAt();
-        void afficheMonstre();
+        void afficheMage();
         int getHit (int attaqueEnnemis);
         bool mortEnnemis();
         void Mort();
