@@ -9,17 +9,20 @@ class Monstre{
 
 
     private:
-        int health = 10;
-        int coutMana = 3;
-        int def = 4;
-        int attaque = 5;
-        string name ('Goblin');
-        int restrictionAt = 1 ;
+        int _health = 10;
+        int _coutMana = 3;
+        int _def = 4;
+        int _attaque = 5;
+        std::string _nom = "Goblin";
+        bool restrictionAt = false;
 
     public:
         Monstre();
         void afficheStat();
-        int getHit (int Attaque);
+        bool restrinctionAt();
+        void afficheMonstre();
+        int getHit (int attaqueEnnemis);
+        bool mortEnnemis();
         void Mort();
 
         void finTour ();

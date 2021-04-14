@@ -2,10 +2,11 @@
 #define MONSTRE_CPP
 
 
-#include <monstre.h>
-using namespace std;
+#include "monstre.h"
 #include <iostream>
 #include <string>
+
+using namespace std;
 
 
     Monstre::Monstre(){}
@@ -37,5 +38,6 @@ using namespace std;
         _health = _health - attaqueEnnemis;
         return _health;
     }
+
 #endif
 

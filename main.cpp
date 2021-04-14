@@ -1,17 +1,11 @@
 #include "monstre.cpp"
+#include "monstre.h"
 #include <iostream>
 #include <string>
 
 
 int main(){
 
-    
-    Tictactoe jeu = Tictactoe();
-    int numeroCase;
-
-    Grille maGrilleDeTest = Grille(7,6);
-    maGrilleDeTest.affiche();
-    
-    
-    return 0;
+    Monstre::afficheMonstre();
+    return;
 }
